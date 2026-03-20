@@ -1,0 +1,14 @@
+{
+  "name": "nextonadstv-telegram-bot",
+  "version": "1.0.0",
+  "description": "Bot oficial de Telegram para NEXTON ADS TV",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "author": "NEXTON ADS TV",
+  "license": "MIT"
+}
