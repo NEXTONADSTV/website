@@ -1,0 +1,250 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Glassmorphism Suave - Paleta de colores */
+  --primary: oklch(0.6 0.15 260);
+  --primary-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.55 0.14 270);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --chart-1: oklch(0.7 0.18 280);
+  --chart-2: oklch(0.65 0.16 270);
+  --chart-3: oklch(0.6 0.15 260);
+  --chart-4: oklch(0.55 0.14 250);
+  --chart-5: oklch(0.5 0.12 240);
+  --radius: 1.2rem;
+  /* Fondo: Gradiente azul-púrpura profundo */
+  --background: linear-gradient(135deg, oklch(0.15 0.08 280) 0%, oklch(0.2 0.1 260) 100%);
+  --foreground: oklch(0.95 0.01 65);
+  /* Tarjetas de vidrio translúcido */
+  --card: oklch(1 0 0 / 0.15);
+  --card-foreground: oklch(0.95 0.01 65);
+  --popover: oklch(1 0 0 / 0.12);
+  --popover-foreground: oklch(0.95 0.01 65);
+  /* Acentos dorados y naranjas */
+  --secondary: oklch(0.75 0.18 45);
+  --secondary-foreground: oklch(0.15 0.05 280);
+  --muted: oklch(1 0 0 / 0.1);
+  --muted-foreground: oklch(0.7 0.08 280);
+  --accent: oklch(0.8 0.2 50);
+  --accent-foreground: oklch(0.15 0.05 280);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 0.2);
+  --input: oklch(1 0 0 / 0.15);
+  --ring: oklch(0.8 0.2 50);
+  --sidebar: oklch(1 0 0 / 0.1);
+  --sidebar-foreground: oklch(0.95 0.01 65);
+  --sidebar-accent: oklch(0.8 0.2 50);
+  --sidebar-accent-foreground: oklch(0.15 0.05 280);
+  --sidebar-border: oklch(1 0 0 / 0.15);
+  --sidebar-ring: oklch(0.8 0.2 50);
+}
+
+.dark {
+  /* Glassmorphism en modo oscuro */
+  --primary: oklch(0.6 0.15 260);
+  --primary-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.55 0.14 270);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --background: linear-gradient(135deg, oklch(0.1 0.06 280) 0%, oklch(0.15 0.08 260) 100%);
+  --foreground: oklch(0.95 0.01 65);
+  --card: oklch(1 0 0 / 0.1);
+  --card-foreground: oklch(0.95 0.01 65);
+  --popover: oklch(1 0 0 / 0.08);
+  --popover-foreground: oklch(0.95 0.01 65);
+  --secondary: oklch(0.75 0.18 45);
+  --secondary-foreground: oklch(0.95 0.01 65);
+  --muted: oklch(1 0 0 / 0.08);
+  --muted-foreground: oklch(0.7 0.08 280);
+  --accent: oklch(0.8 0.2 50);
+  --accent-foreground: oklch(0.15 0.05 280);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 0.15);
+  --input: oklch(1 0 0 / 0.12);
+  --ring: oklch(0.8 0.2 50);
+  --chart-1: oklch(0.7 0.18 280);
+  --chart-2: oklch(0.65 0.16 270);
+  --chart-3: oklch(0.6 0.15 260);
+  --chart-4: oklch(0.55 0.14 250);
+  --chart-5: oklch(0.5 0.12 240);
+  --sidebar: oklch(1 0 0 / 0.08);
+  --sidebar-foreground: oklch(0.95 0.01 65);
+  --sidebar-accent: oklch(0.8 0.2 50);
+  --sidebar-accent-foreground: oklch(0.15 0.05 280);
+  --sidebar-border: oklch(1 0 0 / 0.12);
+  --sidebar-ring: oklch(0.8 0.2 50);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--background);
+    @apply text-foreground;
+    /* Efecto de vidrio global */
+    backdrop-filter: blur(10px);
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card - Tarjeta de vidrio translúcido */
+  .glass-card {
+    @apply backdrop-blur-md bg-card border border-border rounded-2xl;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    @apply bg-card/80 border-accent/50;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+  }
+
+  /* Glassmorphism Header */
+  .glass-header {
+    @apply backdrop-blur-xl bg-sidebar border-b border-border;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Animación de entrada */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background-size: 1000px 100%;
+  }
+
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+
+  /* Responsive glassmorphism adjustments */
+  @media (max-width: 640px) {
+    .glass-card {
+      @apply rounded-xl;
+    }
+  }
+}
