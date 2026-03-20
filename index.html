@@ -1,41 +1,49 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>NEXTON ADS TV · streaming oficial</title>
+    <!-- Política de seguridad básica (CSP) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://via.placeholder.com https://static.tvmaze.com https://*.tvmaze.com https://image.tmdb.org; connect-src 'self' https://api.tvmaze.com; frame-src 'none'; object-src 'none';">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23111112' rx='24'/%3E%3Ctext x='50' y='68' font-size='48' text-anchor='middle' fill='white' font-family='monospace'%3EN%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div class="main-container" id="appMain">
+    <div class="banner">
+        <div class="logo-area">
+            <div class="custom-logo" aria-label="Logo NEXTON ADS TV">◈</div>
+            <div class="brand-text">
+                <h1>NEXTON ADS TV</h1>
+                <p>streaming · original</p>
+            </div>
+        </div>
+        <div class="tagline"><i class="fas fa-tv"></i> catálogo en evolución</div>
+    </div>
+    <div id="dynamicContent"><div class="loading"><i class="fas fa-spinner fa-pulse"></i> cargando experiencia NEXTON...</div></div>
+    <div class="footer-minimal">
+        <span>NEXTON ADS TV · plataforma de streaming independiente</span>
+    </div>
+</div>
+<div class="bottom-appbar">
+    <button class="nav-item" data-section="inicio"><i class="fas fa-home"></i><span>Inicio</span></button>
+    <button class="nav-item" data-section="info"><i class="fas fa-circle-info"></i><span>Información</span></button>
+    <button class="nav-item" data-section="apk"><i class="fas fa-download"></i><span>APK</span></button>
+    <button class="nav-item" data-section="canal"><i class="fas fa-tower-cell"></i><span>Canal</span></button>
+    <button class="nav-item" data-section="bot"><i class="fas fa-robot"></i><span>Bot</span></button>
+</div>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover" />
-    <meta name="description" content="NEXTONADSTV - Plataforma de streaming minimalista con catálogo de series" />
-    <meta name="theme-color" content="#260a5c" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
-    <link rel="apple-touch-icon" href="/favicon-192.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>NEXTONADSTV - Streaming Platform</title>
-    
-    <!-- Google Fonts: Poppins para títulos, Inter para contenido -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <!-- Analytics -->
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-    <!-- Solicitar permisos de navegador -->
-    <script>
-      if ('Notification' in window && Notification.permission === 'default') {
-        // Notification.requestPermission();
-      }
-    </script>
-  </body>
-
+<!-- Scripts modulares -->
+<script src="index.js"></script>
+<script src="inicio.js"></script>
+<script src="info.js"></script>
+<script src="apk.js"></script>
+<script src="canal.js"></script>
+<script src="bot.js"></script>
+</body>
 </html>
